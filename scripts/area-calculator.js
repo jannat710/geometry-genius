@@ -66,3 +66,9 @@ function calculateParallelogramArea(){
     // add to calculation entry
     addToCalculationEntry('Parallelogram', area)
 }
+
+// reusable set span, p, div, etc text
+function setElementInnerText(elementId, area){
+    const element = document.getElementById(elementId)
+    element.innerText = area;
+}
