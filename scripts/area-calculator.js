@@ -51,6 +51,17 @@ function calculateRectangleArea(){
 }
 
 
+function calculateEllipseArea(){
+    const majorRadius = getInputValue('ellipse-major-radius');
+    const minorRadius = getInputValue('ellipse-minor-radius');
+    const area = 3.14 * majorRadius * minorRadius;
+    const areaTwoDecimal = area.toFixed(2);
+    setElementInnerText('ellipse-area', areaTwoDecimal);
+
+    addToCalculationEntry('Ellipse', areaTwoDecimal);
+}
+
+
 // reusable function --> reduce duplicate code
 function calculateParallelogramArea(){
     const base = getInputValue('parallelogram-base');
