@@ -52,3 +52,17 @@ function calculateRectangleArea(){
 
 
 // reusable function --> reduce duplicate code
+function calculateParallelogramArea(){
+    const base = getInputValue('parallelogram-base');
+    const height = getInputValue('parallelogram-height');
+    // validate
+    if(isNaN(base) || isNaN(height)){
+        alert('Please insert number');
+        return
+    }
+    const area = base * height;
+    setElementInnerText('parallelogram-area', area);
+
+    // add to calculation entry
+    addToCalculationEntry('Parallelogram', area)
+}
